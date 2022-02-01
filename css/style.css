@@ -189,6 +189,7 @@ a {
 }
 
 .header__burger {
+    display: none;
     position: absolute;
     left: 15px;
     padding: 0;
