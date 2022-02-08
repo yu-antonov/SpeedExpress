@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SpeedExpress - Доставка грузов из Минска в Москву и обратно</title>
+    <title>SpeedExpressAuto - Доставка грузов из Минска в Москву и обратно</title>
     <link rel="shortcut icon" href="img/icon/box__black.png" type="image/png">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/normalize.css">
@@ -20,7 +20,7 @@
             <div class="preloader__item"></div>
         </div>
     </div>
-    <header class="header">
+    <header id="header" class="header">
         <video class="header__video" autoplay muted loop>
           <source src="video/road_video.mp4" type="video/mp4" />
           <source src="video/road_video.webm" type="video/webm" />
@@ -62,8 +62,8 @@
                 <span class="burger__span burger__span--2"></span>
                 <span class="burger__span burger__span--3"></span>
             </button>
-            <a href="" class="header__logo">
-                <span>Speed</span>Express
+            <a href="#header" class="header__logo">
+                <img src="img/icon/logo__emptyBg.png" alt="Логотип SpeedExpressAuto" class="header__img">
             </a>
             <nav class="header__nav nav">
                 <ul class="nav__list">
@@ -114,7 +114,7 @@
                         </li>
                     </ul>
                 </div>
-                <a href="#contacts" class="hero__btn">
+                <a href="#feedback" class="hero__btn">
                 Оставить заявку
               </a>
             </div>
@@ -128,8 +128,8 @@
                         О нас
                     </h2>
                     <p class="about__descr">
-                        Компания SpeedExpress – надежный грузоперевозчик малогабаритных и среднегабаритных грузов из Минска в Москву и из Москвы в Минск. В компании работают водители, имеющие за плечами приличный опыт перевозки грузов по данному маршруту. Мы осуществляем доставку
-                        грузов как для юридических, так и для физических лиц. Маршрут доставки хорошо налажен и отработан. В Москве у нашей компании имеется свой склад хранения грузов, благодаря чему Вы исключаете вероятность получения дополнительных
+                        Компания SpeedExpressAuto – надежный грузоперевозчик малогабаритных и среднегабаритных грузов из Минска в Москву и из Москвы в Минск. В компании работают водители, имеющие за плечами приличный опыт перевозки грузов по данному маршруту. Мы осуществляем
+                        доставку грузов как для юридических, так и для физических лиц. Маршрут доставки хорошо налажен и отработан. В Москве у нашей компании имеется свой склад хранения грузов, благодаря чему Вы исключаете вероятность получения дополнительных
                         накладных расходов при организации доставки.
                     </p>
                 </div>
@@ -188,40 +188,48 @@
                 <h2 class="services__title section__title">
                     Наши услуги
                 </h2>
-                <ul class="services__list">
-                    <li class="services__item card card--1">
-                        <h3 class="card__title">
-                            Экспресс доставка
-                        </h3>
-                        <p class="card__descr">
-                            Мы приедем в течении дня и отвезём вашу посылку по нужному маршруту в ближайший выезд нашего автомобиля
-                        </p>
-                    </li>
-                    <li class="services__item card card--2">
-                        <h3 class="card__title">
-                            От двери до двери
-                        </h3>
-                        <p class="card__descr">
-                            Это способ отправки и получения груза, не выходя из дома или офиса.
-                        </p>
-                    </li>
-                    <li class="services__item card card--3">
-                        <h3 class="card__title">
-                            Сборная доставка
-                        </h3>
-                        <p class="card__descr">
-                            Вы можете оставить заявку и дождаться, когда курьер поедет в нужном направлении
-                        </p>
-                    </li>
-                    <li class="services__item card card--4">
-                        <h3 class="card__title">
-                            Междугородняя доставка
-                        </h3>
-                        <p class="card__descr">
-                            Основной наш профиль - это доставка грузов по указанным маршрутам
-                        </p>
-                    </li>
-                </ul>
+
+                <div class="services__navigation">
+                    <div class="services-button-prev swiper-button-prev"></div>
+                    <div class="services__pagination"></div>
+                    <div class="services-button-next swiper-button-next"></div>
+                </div>
+                <div class="services__wrapper">
+                    <ul class="services__list">
+                        <li class="services__item card card--1">
+                            <h3 class="card__title">
+                                Экспресс доставка
+                            </h3>
+                            <p class="card__descr">
+                                Мы приедем в течении дня и отвезём вашу посылку по нужному маршруту в ближайший выезд нашего автомобиля
+                            </p>
+                        </li>
+                        <li class="services__item card card--2">
+                            <h3 class="card__title">
+                                От двери до двери
+                            </h3>
+                            <p class="card__descr">
+                                Это способ отправки и получения груза, не выходя из дома или офиса.
+                            </p>
+                        </li>
+                        <li class="services__item card card--3">
+                            <h3 class="card__title">
+                                Сборная доставка
+                            </h3>
+                            <p class="card__descr">
+                                Вы можете оставить заявку и дождаться, когда курьер поедет в нужном направлении
+                            </p>
+                        </li>
+                        <li class="services__item card card--4">
+                            <h3 class="card__title">
+                                Междугородняя доставка
+                            </h3>
+                            <p class="card__descr">
+                                Основной наш профиль - это доставка грузов по указанным маршрутам
+                            </p>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
         <section id="reviews" class="reviews">
@@ -236,57 +244,49 @@
                     <div class="swiper-pagination"></div>
                     <div class="swiper-wrapper">
                         <div class="swiper-slide comment__card">
-                            <h3 class="author__name">Георгий</h3>
-                            <p class="comment__text">
-                                Обратились к этим ребятам по доставке груза с Москвы. Остались очень довольны, прежде всего, ответственным подходом к делу. Машина прибыла вовремя. Цена была согласована заранее, никаких «форс-мажоров» и неприятных сюрпризов в виде переплат не было. Будем
-                                пользоваться и дальше . Рекомендуем всем. Благодарим за помощь и желаем новых довольных клиентов!
-                            </p>
+                            <div class="comment__card-content">
+                                <h3 class="author__name">Георгий</h3>
+                                <p class="comment__text">
+                                    Обратились к этим ребятам по доставке груза с Москвы. Остались очень довольны, прежде всего, ответственным подходом к делу. Машина прибыла вовремя. Цена была согласована заранее, никаких «форс-мажоров» и неприятных сюрпризов в виде переплат не было. Будем
+                                    пользоваться и дальше . Рекомендуем всем. Благодарим за помощь и желаем новых довольных клиентов!
+                                </p>
+                            </div>
                         </div>
                         <div class="swiper-slide comment__card">
-                            <div class="author__block">
+                            <div class="comment__card-content">
                                 <h3 class="author__name">Юлия</h3>
-                            </div>
-                            <div class="author__comment">
                                 <p class="comment__text">
                                     Несколько раз обращались за перевозкой личных вещей из Москвы в Минск и обратно. Без каких либо проблем, адекватно, всегда на связи, за разумные деньги. Рекомендую однозначно!
                                 </p>
                             </div>
                         </div>
                         <div class="swiper-slide comment__card">
-                            <div class="author__block">
+                            <div class="comment__card-content">
                                 <h3 class="author__name">Наталья</h3>
-                            </div>
-                            <div class="author__comment">
                                 <p class="comment__text">
                                     Постоянно обращаюсь к этому перевозчику! Всегда все в сроки, по цене никогда нет проблем договориться, груз в целости и сохранности! Очень надежный грузоперевозчик!!
                                 </p>
                             </div>
                         </div>
                         <div class="swiper-slide comment__card">
-                            <div class="author__block">
+                            <div class="comment__card-content">
                                 <h3 class="author__name">Владимир</h3>
-                            </div>
-                            <div class="author__comment">
                                 <p class="comment__text">
                                     Спасибо перевозчику! Постоянно пользуюсь услугами этого перевозчика. Оперативно, аккуратно и недорого
                                 </p>
                             </div>
                         </div>
                         <div class="swiper-slide comment__card">
-                            <div class="author__block">
+                            <div class="comment__card-content">
                                 <h3 class="author__name">Александр</h3>
-                            </div>
-                            <div class="author__comment">
                                 <p class="comment__text">
                                     Обращался в компанию неоднократно по вопросу перевозок в Минске, а также из Минска в Москву. Все доставили в оговореные сроки. Ребятам компании огромное спасибо!
                                 </p>
                             </div>
                         </div>
                         <div class="swiper-slide comment__card">
-                            <div class="author__block">
+                            <div class="comment__card-content">
                                 <h3 class="author__name">Дмитрий</h3>
-                            </div>
-                            <div class="author__comment">
                                 <p class="comment__text">
                                     Наша компания является уже постоянным клиентом SpeedExpress. Вещей перевезли, наверное, по всей Москве. Спасибо за оперативность и качество.
                                 </p>
@@ -330,7 +330,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="connection__feedback feedback">
+                    <div id="feedback" class="connection__feedback feedback">
                         <div class="feedback__content">
                             <h3 class="feedback__title">
                                 Оформление заявки*
@@ -364,7 +364,7 @@
         <div class="footer__container container">
             <div class="footer__top">
                 <a href="#header" class="footer__logo header__logo">
-                    <span>Speed</span>Express
+                    <img src="img/icon/logo__white.png" alt="Логотип SpeedExpressAuto" class="footer__img">
                 </a>
                 <div class="footer__tel">
                     <a href="tel:+375291642919" class="footer__link">
@@ -377,7 +377,7 @@
             </div>
             <div class="footer__bottom">
                 <p class="footer__copiright">
-                    © 2022 speedexpress.by | Все права защищены
+                    © 2022 speedexpressauto.by | Все права защищены
                 </p>
             </div>
         </div>

@@ -43,10 +43,42 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileSlider = new Swiper('.mobile-slider', {
         direction: 'horizontal',
         autoplay: {
-            delay: 7000
+            delay: 4000
         },
         effect: 'fade',
         loop: true,
         speed: 1000
-    })
+    });
+    //services mobile-slider
+    const mediaQuery767 = window.matchMedia('(max-width: 767px)');
+
+    function handleTabletChange767(e) {
+        if (e.matches) {
+            document.querySelector('.services__list').classList.add('swiper-wrapper');
+            document.querySelectorAll('.services__item').forEach(function(allCard) {
+                allCard.classList.add('swiper-slide')
+            })
+        } else {
+            document.querySelector('.services__list').classList.remove('swiper-wrapper');
+            document.querySelectorAll('.services__item').forEach(function(k) {
+                k.classList.remove('swiper-slide')
+            })
+        }
+        const swiperServices = new Swiper('.services__wrapper', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.services__pagination',
+                type: 'fraction'
+            },
+            slidesPerView: 1,
+            spaceBetween: 30,
+
+
+        });
+    }
+    mediaQuery767.addListener(handleTabletChange767);
+    handleTabletChange767(mediaQuery767);
 })
